@@ -2,6 +2,9 @@ import streamlit as st
 import pickle
 import pandas as pd
 import requests
+import os
+
+TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 
 def fetch_poster(movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?language=en-US"
